@@ -42,20 +42,12 @@ and open the template in the editor.
             <div class="form-group thumbnail sombra-difuminada">
                 <label class="control-label col-sm-1" for="mission-es">Mision <span class="label label-default">Español</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="mission-es" id="mision-es">
-                        <?php
-                            echo substr($organizationEs->mission, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="mission-es" id="mision-es"><?php echo substr($organizationEs->mission, 0, 1100);?></textarea>
                 </div>
                 
                 <label class="control-label col-sm-1" for="mission-en">Mision <span class="label label-default">Ingles</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="mission-en" id="mision-en">
-                        <?php
-                            echo substr($organizationEn->mission, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="mission-en" id="mision-en"><?php echo substr($organizationEn->mission, 0, 1100);?></textarea>
                 </div>
                 
             </div>
@@ -64,20 +56,12 @@ and open the template in the editor.
             <div class="form-group thumbnail sombra-difuminada">
                 <label class="control-label col-md-1" for="view-es">Vision <span class="label label-default">Español</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="view-es" id="view-es">
-                        <?php
-                            echo substr($organizationEs->view, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="view-es" id="view-es"><?php echo substr($organizationEs->view, 0, 1100);?></textarea>
                 </div>
                 
                 <label class="control-label col-md-1" for="view-en">Vision <span class="label label-default">Ingles</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="view-en" id="view-en">
-                        <?php
-                            echo substr($organizationEn->view, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="view-en" id="view-en"><?php echo substr($organizationEn->view, 0, 1100);?></textarea>
                 </div>
                 
             </div>  
@@ -88,20 +72,14 @@ and open the template in the editor.
             <div class="form-group thumbnail sombra-difuminada">
                 <label class="control-label col-md-1" for="history-es">Antecedentes <span class="label label-default">Español</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="history-es" id="history-es">
-                        <?php
-                            echo substr($organizationEs->history, 0, 1100);
+                    <textarea class="form-control min-size" name="history-es" id="history-es"><?php echo substr($organizationEs->history, 0, 1100);
                         ?>
                     </textarea>
                 </div>
                 
                 <label class="control-label col-md-1" for="history-en">Antecedentes <span class="label label-default">Ingles</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="history-en" id="history-en">
-                        <?php
-                            echo substr($organizationEn->history, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="history-en" id="history-en"><?php echo substr($organizationEn->history, 0, 1100); ?> </textarea>
                 </div>
                 
             </div>  
@@ -110,20 +88,12 @@ and open the template in the editor.
             <div class="form-group thumbnail sombra-difuminada">
                 <label class="control-label col-md-1" for="comission-es">Comisión <span class="label label-default">Español</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="comission-es" id="comission-es">
-                        <?php
-                            echo substr($organizationEs->comission, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="comission-es" id="comission-es"> <?php echo substr($organizationEs->comission, 0, 1100);?></textarea>
                 </div>
                 
                 <label class="control-label col-md-1" for="comission-en">Comisión <span class="label label-default">Ingles</span></label>
                 <div class="col-sm-5">
-                    <textarea class="form-control min-size" name="comission-en" id="comission-en">
-                        <?php
-                            echo substr($organizationEn->comission, 0, 1100);
-                        ?>
-                    </textarea>
+                    <textarea class="form-control min-size" name="comission-en" id="comission-en"><?php echo substr($organizationEn->comission, 0, 1100);?></textarea>
                 </div>
             </div>  
             <div class="form-group">

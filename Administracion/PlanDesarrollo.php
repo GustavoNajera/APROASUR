@@ -40,17 +40,13 @@ and open the template in the editor.
                     <!--Descripcion español-->
                     <label class="control-label col-md-1" for="description-es">Descripción <span class="label label-default">Español</span></label>
                     <div class="col-md-5">
-                        <textarea class="form-control text-justify min-size" name="description-es" id="description-es">
-                            <?php echo $planEs->description; ?>      
-                         </textarea>
+                        <textarea class="form-control text-justify min-size" name="description-es" id="description-es"><?php echo $planEs->description; ?></textarea>
                    </div>
                     
                     <!--descripcion Ingles-->
                     <label class="control-label col-md-1" for="description-en">Descripción <span class="label label-default">Ingles</span></label>
                     <div class="col-md-5">
-                        <textarea class="form-control text-justify min-size" name="description-en" id="description-en">
-                            <?php echo $planEn->description; ?>   
-                         </textarea>
+                        <textarea class="form-control text-justify min-size" name="description-en" id="description-en"><?php echo $planEn->description; ?></textarea>
                    </div>
                </div>
                
@@ -59,17 +55,13 @@ and open the template in the editor.
                     <!--Objetivo español-->
                     <label class="control-label col-md-1" for="objective-es">Objetivo <span class="label label-default">Español</span></label>
                     <div class="col-md-5">
-                        <textarea class="form-control text-justify min-size" name="objective-es" id="objective-es">
-                            <?php echo $planEs->objective; ?>      
-                        </textarea>
+                        <textarea class="form-control text-justify min-size" name="objective-es" id="objective-es"><?php echo $planEs->objective; ?></textarea>
                     </div>
 
                     <!--Objetivo Ingles-->
                     <label class="control-label col-md-1" for="objective-en">Objetivo <span class="label label-default">Ingles</span></label>
                     <div class="col-md-5">
-                        <textarea class="form-control text-justify min-size" name="objective-en" id="objective-en">
-                            <?php echo $planEn->objective; ?>   
-                        </textarea>
+                        <textarea class="form-control text-justify min-size" name="objective-en" id="objective-en"><?php echo $planEn->objective; ?></textarea>
                    </div>
                 </div>
                
