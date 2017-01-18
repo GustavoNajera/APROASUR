@@ -10,54 +10,9 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <form enctype="multipart/form-data" method="POST" action="../Business/ProductInsertAction.php" class="form-horizontal">
+        <form enctype="multipart/form-data" method="POST" action="../Business/GalleryInsertAction.php" class="form-horizontal">
 
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="../Images/hojas_platano.jpg">
-                        <br/>
-                        <textarea class="form-control" name="description-en" id="description-en" placeholder="Ingles"></textarea>
-
-                        <br/>
-                        <textarea class="form-control" name="description-en" id="description-en" placeholder="Ingles"></textarea>
-
-                        <div class="caption">
-                            <p><a href="#" class="btn btn-primary" role="button">Eliminar</a> <a href="#" class="btn btn-default" role="button">Actualizar</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="../Images/pejibaye.JPG">
-                        <br/>
-                        <textarea class="form-control" name="description-en" id="description-en" placeholder="Ingles"></textarea>
-
-                        <br/>
-                        <textarea class="form-control" name="description-en" id="description-en" placeholder="Ingles"></textarea>
-
-                        <div class="caption">
-                            <p><a href="#" class="btn btn-primary" role="button">Eliminar</a> <a href="#" class="btn btn-default" role="button">Actualizar</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="../Images/tapa_dulce.jpg">
-                        <br/>
-                        <textarea class="form-control" name="description-en" id="description-en" placeholder="Ingles"></textarea>
-
-                        <br/>
-                        <textarea class="form-control" name="description-en" id="description-en" placeholder="Ingles"></textarea>
-
-                        <div class="caption">
-                            <p><a href="#" class="btn btn-primary" role="button">Eliminar</a> <a href="#" class="btn btn-default" role="button">Actualizar</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br/><br/>
+            
             <div class="col-sm-12 col-md-12">
                 <div class="thumbnail">
                     
@@ -74,10 +29,10 @@ and open the template in the editor.
                     </div>
                     
                     
-                    <textarea class="form-control" name="description-en" id="description-en" placeholder="Descripción en Español"></textarea>
+                    <textarea class="form-control" name="description" id="description" placeholder="Descripción en Español"></textarea>
 
                     <br/>
-                    <textarea class="form-control" name="description-en" id="description-en" placeholder="Descripción en Ingles"></textarea>
+                    <textarea class="form-control" name="descriptionEn" id="descriptionEn" placeholder="Descripción en Ingles"></textarea>
                 
                     <!--Fin de cargar imagen-->
                     <div class="form-group" style="margin-left: 26%">                                        
@@ -89,5 +44,41 @@ and open the template in the editor.
                 </div>
             </div>
         </form>
+        
+    
+        <div class="row">
+            <?php
+            $GB = new GalleryBusiness();
+            $gallery = $GB->getImagesGalleryBusiness();
+            $galleryEn = $GB->getImagesGalleryBusinessEn();
+            $cont  = 0;
+            foreach ($gallery as $currentImage) {
+                $var = $galleryEn[$cont]->description;
+                ?>
+                <div class="col-sm-6 col-md-4">
+                    <form method="POST" action="../Business/GalleryUpdateAction.php">
+                        <div class="thumbnail">
+                            <img src="<?php echo $currentImage->path; ?>"style="width: 250px; height: 225px" >
+                            <div class="caption">
+                                <textarea class='form-control' name='description' id='description' placeholder='Español'> <?php echo $currentImage->description; ?></textarea>
+                                <br>
+                                <textarea class='form-control' name='descriptionEn' id='descriptionEn' placeholder='Ingles'> <?php echo $var; ?></textarea>
+                                <br>
+                                <input type='text' name='id' id='id' hidden='true' value="<?php echo $currentImage->idImage; ?>">
+                                <p><a href="<?php echo '../Business/GalleryDeleteAction.php?id=' . $currentImage->idImage ?>" class="btn btn-default" role="button">Eliminar</a> 
+                                    <button style='height: 30px' type='submit' class='btn btn-default'>Actualizar</button>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div> 
+                <?php
+                $cont++;
+            }
+            ?>
+            
+        </div>
+        
     </body>
 </html>

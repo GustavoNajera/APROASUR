@@ -24,5 +24,32 @@ class GalleryBusiness{
       public function insertBusiness($image,$user,$db) {
         return $this->GalleryData->insert($image,$user,$db);
     }
+
+    /*****************************************************/
+    public function getImagesGalleryBusiness() {
+        return $this->GalleryData->getImagesGallery();
+    }
+    
+    public function getImagesGalleryBusinessEn() {
+        return $this->GalleryData->getImagesGalleryEn();
+    }
+    
+    public function insertGalleryDB($image, $bd, $user) {
+        $result = $this->GalleryData->insertGalleryDB($image, $bd, $user);
+        return $result;
+    }
+    
+    public function updateGallery($db, $user, $description, $id){
+        return $this->GalleryData->updateGallery($db, $user,$description, $id);
+    }
+    
+    public function deleteGallery($db, $user, $id){
+        return $this->GalleryData->deleteGallery($db, $user, $id);
+    }
+    
+    /*****************************************************/
+}
+
+
    
 }

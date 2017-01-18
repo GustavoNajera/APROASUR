@@ -162,7 +162,7 @@ if (isset($_SESSION['user'])) {
                             
                             
                             <div id="tabs-6">
-                                <?php /*include('../Administracion/Galeria.php');*/ ?>
+                                <?php include('../Administracion/Galeria.php'); ?>
                             </div>
                             
                             <div id="tabs-7">
